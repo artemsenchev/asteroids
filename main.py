@@ -6,10 +6,23 @@ from player import *
 import time
 
 
+def displayScore(score, font, screen):
+   
+    text = font.render(f"Score: {score}", True, (255, 255, 255))
+    text_rect = text.get_rect()
+    text_rect.topright = (SCREEN_WIDTH-10, 0) #width, 0 is the top right corner.
+    
+    screen.blit(text, text_rect)
 
 def main():
     print("Starting Asteroids!")
     pygame.init()
+    pygame.font.init()
+
+
+    font = pygame.font.SysFont('Arial', 24)
+    
+    
 
     pygame.display.set_caption("Asteroids")
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
@@ -55,10 +68,10 @@ def main():
             for shot in shot_group:
                 if asteroid.collide(shot):
                     print("Hit!")
-                    asteroid.split()
+                    asteroid.split(player)
                     shot.kill()
                     
-
+        displayScore(str(player.score), font, screen)
         pygame.display.flip() #flip/update the display: make the drawn content visible
 
         

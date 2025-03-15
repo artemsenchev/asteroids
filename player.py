@@ -7,6 +7,8 @@ class Player(CircleShape):
         super().__init__(x, y, radius)
         self.rotation = 0
 
+        self.score = 0  # Player's score
+
         self.timer = 0  # Timer for shooting cooldown
         
 
