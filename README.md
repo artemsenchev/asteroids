@@ -46,13 +46,14 @@ The game includes the following features:
   - Large asteroids split into two medium-sized asteroids.
   - Medium-sized asteroids split into two small ones.
   - Small asteroids disappear when destroyed.
+- **Scoring System**: Scoring mechanism to track player performance.
 
 ---
 
 ## Possible Extensions
 
 While the current implementation is functional, there are several opportunities for future enhancements:
-- **Scoring System**: Add a scoring mechanism to track player performance.
+
 - **Lives and Respawning**: Implement multiple lives and respawn functionality.
 - **Explosion Effects**: Add visual effects for asteroid destruction.
 - **Acceleration**: Introduce acceleration mechanics for smoother player movement.
